@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import "./Components/Product/Product.css";
 
 function Product() {
+  
   return (
     <div className="product">
       <a href="./page/sample">
         <div className="product__card">
           <div className="product__status">NEW</div>
-          <img className="product__image" src="./img" alt="" />
+          <img className="product__image" src={require("../../sample/wine3.png")} alt="" />
 
           <div className="product__info">
             <span className="product__category">GIFT Box</span>
