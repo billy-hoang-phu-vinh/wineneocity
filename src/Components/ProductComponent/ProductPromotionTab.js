@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import ProductList from "./ProductList";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import Product from "./Product";
+import { Scrollbar } from "swiper";
 
 function ProductPromotionTab() {
   const [toggleState, setToggleState] = useState(1);
@@ -24,7 +28,7 @@ function ProductPromotionTab() {
             </div>
             <div className="width-50 light-height-1 mx-top-4px">
               <div className="d-flex height-100">
-                <div className="no ">
+                <div className="width-100">
                   <div className="tab">
                     <button
                       className={
@@ -70,20 +74,41 @@ function ProductPromotionTab() {
           <div className=" border-top-bottom-1px width-100 d-flex ">
             <div className="width-100 light-height-1 mx-top-4px">
               <div className="d-flex height-100">
-                <div className="no">
-                  spread product here
+                <div className="width-100">
                   <div
                     className="tabcontent"
                     style={toggleState === 1 ? { display: "flex" } : {}}
                   >
-                    tab1 content here
-                    <ProductList/>
+                    {/* <ProductList /> */}
                   </div>
                   <div
                     className="tabcontent"
                     style={toggleState === 2 ? { display: "flex" } : {}}
                   >
-                    tab2 here
+                    {/* tab2 here */}
+                    <React.Fragment>
+                      <div className="swiperContainer" id="swiperContainer">
+                        <Swiper
+                          spaceBetween={16}
+                          slidesPerView={4}
+                          onSlideChange={() => console.log("slide change")}
+                          onSwiper={(swiper) => console.log(swiper)}
+                          scrollbar={{
+                            hide: true,
+                          }}
+                          modules={[Scrollbar]}
+
+                        >
+                          <SwiperSlide><Product/></SwiperSlide>
+                          <SwiperSlide><Product/></SwiperSlide>
+                          <SwiperSlide><Product/></SwiperSlide>
+                          <SwiperSlide><Product/></SwiperSlide>
+                          <SwiperSlide><Product/></SwiperSlide>
+                          <SwiperSlide><Product/></SwiperSlide>
+
+                        </Swiper>
+                      </div>
+                    </React.Fragment>
                   </div>
                   <div
                     className="tabcontent"

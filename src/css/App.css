@@ -53,6 +53,11 @@ img {
     max-width: 1024px;
   }
 }
+@media only screen and (min-width: 1300px) {
+  .container {
+    max-width: 1300px;
+  }
+}
 /* Preset: Light height */
 .light-height-1{
   line-height: 1;
@@ -423,9 +428,28 @@ p {
   border-top: none;
 }
 .product{
-
+  padding: 1rem;
 }
 .product__image{
-  width: auto;
-  height: 300px;
+  max-width: 243px;
+  height: 250px;
+}
+/* .product{
+  width: 243px;
+  height: auto;
+
+  margin-right: 1rem;
+  flex-basis: 25%;
+  flex-shrink: 0;
+
+} */
+
+#swiperContainer{
+  width: 100%;
+  height: auto;
+}
+.swiper-scrollbar{
+  opacity: 1 !important;
+  transform: scale(0.5) !important;
+
 }
