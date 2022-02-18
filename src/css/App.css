@@ -23,7 +23,7 @@ body {
 }
 
 a {
-  color: #cda45e;
+  color: black;
   text-decoration: none;
 }
 
@@ -74,6 +74,9 @@ img {
 .border-bottom-2px{
   border-bottom-width:2px;
 }
+.border-right-width{
+  border-right-width: 1px;
+}
 /* Preset: Padding */
 .padding-left-right-1r {
   padding-left: 1rem;
@@ -102,8 +105,29 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+.mx-1rem {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.mx-2rem {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
 .mx-top-4px{
   margin-top: 4px;
+}
+.mt-8px {
+  margin-top: 8px;
+}
+.mb-4px {
+  margin-bottom: 4px;
+}
+.mb-16px {
+  margin-bottom: 16px;
+}
+.mtb-24px {
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 h1,
@@ -205,6 +229,9 @@ p {
 .text-center {
   text-align: center;
 }
+.text-font-bold{
+  font-weight: 700;
+}
 .text-12 {
   font-size: 0.75rem;
 }
@@ -253,11 +280,17 @@ p {
 .width-30 {
   width: 30%;
 }
+.width-1-3 {
+  width: calc(100%/3);
+}
 .width-50 {
   width: 50%;
 }
 .width-60 {
   width: 60%;
+}
+.width-2-3 {
+  width: calc(2*(100%/3));
 }
 .width-70 {
   width: 70%;
@@ -397,7 +430,6 @@ p {
 .tab{
   overflow: hidden;
   /* border: 1px solid #ccc; */
-  background-color: #f1f1f1;
   font-size: large;
 
 }
@@ -451,5 +483,7 @@ p {
 .swiper-scrollbar{
   opacity: 1 !important;
   transform: scale(0.5) !important;
-
+}
+#paymentoption{
+  max-width: 140px;
 }
