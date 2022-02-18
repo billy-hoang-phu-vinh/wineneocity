@@ -23,7 +23,8 @@ function Slider() {
   }
   return (
     <div className="slider-support">
-      <div className="header-bar-navigation">
+      {/* test */}
+      <div className="slider-navigation">
         <div className="container mx-auto">
           <div className="d-flex justify-between">
             {/* <div className="bg-red size-test"> */}

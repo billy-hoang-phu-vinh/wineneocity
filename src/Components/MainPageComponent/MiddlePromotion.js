@@ -25,7 +25,7 @@ function MiddlePromotion() {
                       <span className="padding-8px">
                         <i class="fa fa-th-large"></i>
                       </span>
-                      <span className="padding-8px">40$ Off your 1st order with "NEW40" (min. spend of 80$)</span>
+                      <span className="padding-8px">80$ Off your 1st order with "NEW80" (min. spend of 160$)</span>
 
                       
                     </div>

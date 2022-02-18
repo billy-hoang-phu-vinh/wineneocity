@@ -12,7 +12,7 @@ function ProductPromotionTab() {
     setToggleState(index);
   };
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto bg-silk">
       <div className="d-flex justify-between position-relative">
         <div className="d-flex flex-col item-center width-100 ">
           <div className=" border-top-bottom-1px width-100 d-flex ">
