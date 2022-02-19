@@ -92,7 +92,7 @@ function SignIn() {
                 className="tabcontent width-100"
                 style={signinForm === 2 ? { display: "flex" } : {}}
               >
-                <form className="signin_form_frame flex width-2-3  text-16">
+                <form className="signin_form_frame flex width-2-3">
                   <div className="input_wrap">
                     <p>SIGN UP FORM EMAIL:</p>
                     <input className="input_field" type="text" />
