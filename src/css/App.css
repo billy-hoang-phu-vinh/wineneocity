@@ -654,3 +654,32 @@ text-overflow: ellipsis;
 .brand:hover .megamenu{
   display: flex;
 }
+.category_title{
+  font-size: 1.8rem;
+
+  color: white;
+  background-image: linear-gradient(90deg,#e40322 40%,#6b2369 60%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.categoryPromo{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.categoryPromo .card{
+  flex-basis: auto;
+  margin:auto;
+}
+.categoryPromo img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit:cover;
+ 
+}
+.categoryName{
+  margin-top: 1rem;
+  color: #eb356c;
+  font-weight:700;
+  text-align: center;
+}
