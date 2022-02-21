@@ -22,14 +22,12 @@ function ProductPromotionTab() {
     <div className="container mx-auto bg-silk">
       <div className="d-flex justify-between position-relative">
         <div className="d-flex flex-col item-center width-100 ">
-          <div className=" border-top-bottom-1px width-100 d-flex ">
+          <div className="  width-100 d-flex ">
             <div className="width-30 light-height-1 mx-top-4px">
               <div className="d-flex height-100">
                 <div className="category-hoverable ">
-                  <span className="padding-8px">
-                    <i class="fa fa-th-large"></i>
-                  </span>
-                  <span className="padding-8px">Sweet Valentine</span>
+              
+                  <span className="padding-8px">Wines & Spirits Top Picks</span>
                 </div>
               </div>
             </div>
@@ -78,7 +76,7 @@ function ProductPromotionTab() {
       </div>
       <div className="d-flex justify-between position-relative">
         <div className="d-flex flex-col item-center width-100 ">
-          <div className=" border-top-bottom-1px width-100 d-flex ">
+          <div className=" width-100 d-flex ">
             <div className="width-100 light-height-1 mx-top-4px">
               <div className="d-flex height-100">
                 <div className="width-100">

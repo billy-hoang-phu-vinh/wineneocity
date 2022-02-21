@@ -4,8 +4,8 @@ function MiddlePromotion() {
   return (
     <div className="container mx-auto">
           <div className="d-flex justify-between position-relative">
-            <div className="d-flex flex-col item-center width-100 ">
-              <div className=" border-top-bottom-1px width-100 d-flex ">
+            <div className="d-flex flex-col item-center width-100 mtb-16px">
+              <div className=" width-100 d-flex ">
                 
                 <div className="width-50 light-height-1 mx-top-4px">
                   <div className="d-flex height-100">

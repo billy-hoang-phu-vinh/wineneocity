@@ -5,7 +5,7 @@ function CategoryPromotion() {
     <div className="container mx-auto">
       <div className="d-flex justify-between position-relative">
         <div className="d-flex flex-col item-center width-100 ">
-          <div className=" border-top-bottom-1px width-100 d-flex ">
+          <div className=" width-100 d-flex ">
             <div className="width-100  d-flex flex-col item-center height-100 padding-8px">
             <div className="categoryPromo justify-center width-100 d-flex flex-wrap flex-row item-center">
              <div className="category_title">Wines & Spirits</div>

@@ -50,27 +50,30 @@ function HeaderCategory() {
                     <div>BRANDS</div>
                     {/* test */}
                     <div className="megamenu">
-                      <div className="d-flex flex-1 brand">
-                        <div className="sub-brand brand-show">
+                      <div className="d-flex flex-1 brand ">
+                        <div className="sub-brand brand-show padding-left-right-05r">
                           <div className="flex-col item-center d-flex justify-between">
                             <div className="width-100 d-flex item-center height-100 padding-8px">
                               <div className="width-100">
-                              <form className="flex width-100">
-                <div className="search-form width-100 d-flex">
-                  <div className="position-relative width-100 padding-top-left-5px d-flex flex-row">
-                    <button className="search-submit" type="submit">
-                      <i class="fa fa-search"></i>
-                    </button>
-                    {/* <img className="width-7-px" src={require('../img/logo.png')} alt="" srcset="" /> */}
-                    <div className="flex-basis-80">
-                      <input
-                        placeholder="Search for Brands"
-                        className="search-input width-100"
-                      ></input>
-                    </div>
-                  </div>
-                </div>
-              </form>
+                                <form className="flex width-100">
+                                  <div className="search-form width-100 d-flex">
+                                    <div className="position-relative width-100 padding-top-left-5px d-flex flex-row">
+                                      <button
+                                        className="search-submit"
+                                        type="submit"
+                                      >
+                                        <i class="fa fa-search"></i>
+                                      </button>
+                                      {/* <img className="width-7-px" src={require('../img/logo.png')} alt="" srcset="" /> */}
+                                      <div className="flex-basis-80">
+                                        <input
+                                          placeholder="Search for Brands"
+                                          className="search-input width-100"
+                                        ></input>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </form>
                               </div>
                             </div>
                             <div className="flex-col width-100  d-flex height-100 padding-8px">
@@ -78,6 +81,26 @@ function HeaderCategory() {
                             </div>
                             <div className="width-100  d-flex item-center height-100 padding-8px">
                               <div className="width-100 d-flex flex-wrap">
+                                <div className="width-20 padding-8px">
+                                  <a href="./page/product/apple">
+                                    <img
+                                      src={
+                                        "https://pic.onlinewebfonts.com/svg/img_103664.png"
+                                      }
+                                      alt=""
+                                    />
+                                  </a>
+                                </div>
+                                <div className="width-20 padding-8px">
+                                  <a href="./page/product/apple">
+                                    <img
+                                      src={
+                                        "https://pic.onlinewebfonts.com/svg/img_103664.png"
+                                      }
+                                      alt=""
+                                    />
+                                  </a>
+                                </div>
                                 <div className="width-20 padding-8px">
                                   <a href="./page/product/apple">
                                     <img
