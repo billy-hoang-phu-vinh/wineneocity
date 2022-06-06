@@ -34,6 +34,10 @@ a:hover {
 img {
   max-width: 100%;
 }
+/* Main container */
+.main-container{
+  display: block;
+}
 /* Container */
 .container {
   width: 100%;
