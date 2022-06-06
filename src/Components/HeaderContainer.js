@@ -6,7 +6,7 @@ function Heading() {
   
   
   return (
-    <div className="header-container">
+    <div className="header-container header-wrap">
       <TopPromotion/>
       <HeaderNavigation/>
       <HeaderCategory/>
