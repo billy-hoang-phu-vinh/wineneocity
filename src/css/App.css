@@ -717,3 +717,8 @@ text-overflow: ellipsis;
   /* test */
   max-width: 700px;
 }
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
