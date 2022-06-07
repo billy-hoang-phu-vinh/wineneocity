@@ -37,7 +37,9 @@ function HeaderNavigation() {
             </div>
             <div className="user-header-bar d-flex justify-end position-relative">
               <div className="width-35-px padding-top-bottom-dot5">
-                <i class="fa fa-user-o scale-1-3" aria-hidden="true"></i>
+              <a href="/signin">
+              <i class="fa fa-user-o scale-1-3" aria-hidden="true"></i>
+              </a>
               </div>
               <div className="padding-top-bottom-dot5">
                 <i

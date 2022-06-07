@@ -1,7 +1,8 @@
-import React, { useState} from "react";
+import React from "react";
 import TopPromotion from './HeaderComponent/TopPromotion';
 import HeaderNavigation from './HeaderComponent/HeaderNavigation';
 import HeaderCategory from './HeaderComponent/HeaderCategory';
+
 function Heading() {
   
   

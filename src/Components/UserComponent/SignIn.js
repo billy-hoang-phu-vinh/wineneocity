@@ -9,7 +9,7 @@ function SignIn() {
   return (
     <div className="signin-container width-100 justify-center d-flex">
       <div className="signin-bar-navigation width-100 justify-center">
-        <div className="container mx-auto d-flex justify-center">
+        <div className="container mx-auto d-flex justify-center" id="signin_tab">
           <div className="d-flex justify-center flex-col width-2-3 ">
             <div className="logo padding-8px width-100 d-flex justify-center">
               <a className="inline-block" href="http://">
@@ -94,35 +94,31 @@ function SignIn() {
               >
                 <form className="signin_form_frame flex width-2-3">
                   <div className="input_wrap">
-                    <p>SIGN UP FORM EMAIL:</p>
-                    <input className="input_field" type="text" />
+                    <p>Email Address* :</p>
+                    <input className="form_email input_field" type="text" placeholder="Please enter your email address"/>
                   </div>
                   <div className="input_wrap">
-                    <p>PASSWORD:</p>
-                    <input className="input_field" type="password" />
+                    <p>Password* :</p>
+                    <input className="form_password input_field" type="password" placeholder="Please enter your password"/>
+                  </div>
+                  <div className="input_wrap">
+                    <p>Confirm Password* :</p>
+                    <input className="form_cf_password input_field" type="password" placeholder="Please confirm your password" />
                   </div>
                   <div className="input_wrap padding-bottom-24px width-1-3">
                     <p>
                       <span>
                         <input type="checkbox" name="" id="" />
                       </span>{" "}
-                      Remember me{" "}
+                      Send me news about exclusive deals, benefits and other promotions{" "}
                     </p>
                   </div>
                   <div className="input_wrap mt-8px">
-                    <input className="btn_submit" type="submit" value="LOGIN" />
+                    <input className="btn_submit" id="btn_signup" type="submit" value="SIGNUP" />
                   </div>
-                  <div className="input_wrap mt-8px">
-                    <input
-                      className="btn_submit_fb btn_submit"
-                      type="submit"
-                      value="LOGIN WITH FACEBOOK"
-                    />
-                  </div>
+                  
                   <div className="horizontalLine"></div>
-                  <div className="reset_password width-100 text-center">
-                    <a href="http://google.com">Reset your password</a>{" "}
-                  </div>
+                  
                 </form>
               </div>
             </div>

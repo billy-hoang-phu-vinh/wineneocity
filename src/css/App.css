@@ -38,10 +38,23 @@ img {
 .main-container{
   display: block;
 }
+/* Header container */
+.header-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background-color: white;
+}
+
 /* Container */
 .container {
   width: 100%;
 }
+/* Button */
+#btn_signup{
+  background-color: green;
+}
+
 @media only screen and (min-width: 360px) {
   .container {
     max-width: 480px;
@@ -497,7 +510,6 @@ p {
   overflow: hidden;
   /* border: 1px solid #ccc; */
   font-size: large;
-
 }
 .tab button {
   
@@ -522,7 +534,7 @@ p {
 .tabcontent {
   display: none;
   padding: 0.75rem;
-  border: 1px solid #ccc;
+  
   border-top: none;
 }
 .product{
@@ -696,4 +708,9 @@ text-overflow: ellipsis;
   color: #eb356c;
   font-weight:700;
   text-align: center;
+}
+/* signin page */
+#signin_tab{
+  /* test */
+  max-width: 700px;
 }
