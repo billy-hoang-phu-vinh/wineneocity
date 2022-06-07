@@ -1,9 +1,22 @@
 import React, { useState } from "react";
+ import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword } from "firebase/auth";
+
+import { initializeApp } from "firebase/app";
+const firebaseConfig = {
+  apiKey: "AIzaSyD2Mm5bNQFThnTU0GxPGQXP6ZPDr2OPhTg",
+  authDomain: "wineneocityv9.firebaseapp.com",
+  projectId: "wineneocityv9",
+  storageBucket: "wineneocityv9.appspot.com",
+  messagingSenderId: "378587396799",
+  appId: "1:378587396799:web:974cea30d608651c6b240a"
+}
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 
 function SignIn() {
   const [signinForm, setToggleState] = useState(1);
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  // const [password, setPassword] = useState("");
   //onclick -> save tab positon
   const signinTab = (index) => {
     setToggleState(index);
@@ -13,8 +26,47 @@ function SignIn() {
     console.log('register success');
     console.log(email);
     //firebase here
+    const password = '123456';
+    //verify password
+
+    //register
+    createUserWithEmailAndPassword(auth, email,password)
+    .then((userCredential) => {
+      // Signed in 
+      console.log(userCredential.user)
+      console.log('thanh cong')
+      // ...
+    })
+    .catch((error) => {
+      console.log(error.message)
+      console.log('bug')
+      // ..
+    });
     
   }
+  //login
+  const login = e => {
+    e.preventDefault();
+    console.log(email);
+    //firebase here
+    const password = '123456';
+    //login
+    signInWithEmailAndPassword(auth, email,password)
+    .then((userCredential) => {
+      // Signed in 
+      console.log(userCredential.user)
+      console.log('thanh cong login')
+      // ...
+    })
+    .catch((error) => {
+      console.log(error.message)
+      console.log('bug')
+      // ..
+    });
+    
+  }
+  //test
+
 
   return (
     <div className="signin-container width-100 justify-center d-flex">
@@ -67,11 +119,11 @@ function SignIn() {
                 <form className="signin_form_frame flex width-2-3  text-16">
                   <div className="input_wrap">
                     <p>EMAIL:</p>
-                    <input className="input_field" type="text" />
+                    <input className="input_field" onChange={e =>{setEmail(e.target.value)}} type="text" />
                   </div>
                   <div className="input_wrap">
                     <p>PASSWORD:</p>
-                    <input className="input_field" type="password" />
+                    <input className="input_field" onChange={e =>{setEmail(e.target.value)}} type="password" />
                   </div>
                   <div className="input_wrap padding-bottom-24px width-1-3">
                     <p>
@@ -82,8 +134,12 @@ function SignIn() {
                     </p>
                   </div>
                   <div className="input_wrap mt-8px">
-                    <input className="btn_submit" type="submit" value="LOGIN" />
+                    {/* <input className="btn_submit" id="btn_signup" type="submit" value="SIGNUP" /> */}
+                    <button className="btn_submit" onClick={login}>LOGIN</button>
                   </div>
+                  
+
+
                   <div className="input_wrap mt-8px">
                     <input
                       className="btn_submit_fb btn_submit"
@@ -125,7 +181,7 @@ function SignIn() {
                   </div>
                   <div className="input_wrap mt-8px">
                     {/* <input className="btn_submit" id="btn_signup" type="submit" value="SIGNUP" /> */}
-                    <button className="btn_submit" onClick={register}>Register</button>
+                    <button className="btn_submit_gr btn_submit" onClick={register}>Register</button>
                   </div>
                  
                   

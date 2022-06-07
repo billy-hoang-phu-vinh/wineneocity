@@ -638,6 +638,9 @@ text-overflow: ellipsis;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
 }
+.btn_submit_gr{
+  background-color: green !important;
+}
 .btn_submit{
   background-color: #7f2161; /* Green */
   border: none;
