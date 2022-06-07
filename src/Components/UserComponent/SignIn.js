@@ -1,11 +1,28 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { signup } from "../firebase";
 import { login } from "../firebase";
 import { auth } from "../firebase";
 import { createUserWithEmailAndPassword,signInWithEmailAndPassword } from "firebase/auth";
+import { async } from "@firebase/util";
+import { useHistory } from "react-router-dom";
+
 
 
 function SignIn() {
+  //auth state changed
+  // test
+  const [currentUser, setcurrentUser] = useState();
+
+  useEffect(()=>{
+    const unsubcribe = auth.onAuthStateChanged((user => {
+      setcurrentUser(user);
+
+    }));
+    return unsubcribe;
+  },[])
+
+const history = useHistory(); //
+
   const [loginErr, setLoginErr] = useState(false);
   const [registerErr, setRegisterErr] = useState(false);
 
@@ -18,6 +35,8 @@ function SignIn() {
   const signinTab = (index) => {
     setToggleState(index);
   };
+
+
   const register = (e) => {
     e.preventDefault();
     console.log("register success");
@@ -29,8 +48,11 @@ function SignIn() {
     createUserWithEmailAndPassword(auth, email,password).then((userCredential) => {
       // Signed in 
       console.log(userCredential.user)
-      console.log('thanh cong')
-      // ...
+      //register successfully
+      if(userCredential){
+        history.push('/');
+      }
+      
     })
     .catch((error) => {
       setRegisterErr(true);
@@ -39,6 +61,8 @@ function SignIn() {
   };
   //login
   const signin = (e) => {
+    console.log(`currentUser`)
+    console.log(currentUser)
     e.preventDefault();
     console.log(email);
     //firebase here
@@ -46,7 +70,7 @@ function SignIn() {
     signInWithEmailAndPassword(auth, email,password).then((userCredential) => {
       // Signed in 
       console.log(userCredential.user)
-      console.log('thanh cong')
+      
       // ...
     })
     .catch((error) => {

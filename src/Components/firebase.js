@@ -20,12 +20,11 @@ export function signup(auth, email,password){
     return createUserWithEmailAndPassword(auth, email,password).then((userCredential) => {
         // Signed in 
         console.log(userCredential.user)
-        console.log('thanh cong')
         // ...
       })
       .catch((error) => {
         console.log(error.message)
-        console.log('bug')
+        
         // ..
       });
 };
@@ -34,12 +33,12 @@ export function login(auth, email,password){
     return signInWithEmailAndPassword(auth, email,password).then((userCredential) => {
         // Signed in 
         console.log(userCredential.user)
-        console.log('thanh cong')
+        
         // ...
       })
       .catch((error) => {
         console.log(error.message)
-        console.log('bug')
+        
         // ..
       });
 }
