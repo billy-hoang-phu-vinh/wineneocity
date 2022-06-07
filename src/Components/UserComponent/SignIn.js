@@ -2,10 +2,20 @@ import React, { useState } from "react";
 
 function SignIn() {
   const [signinForm, setToggleState] = useState(1);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   //onclick -> save tab positon
   const signinTab = (index) => {
     setToggleState(index);
   };
+  const register = e => {
+    e.preventDefault();
+    console.log('register success');
+    console.log(email);
+    //firebase here
+    
+  }
+
   return (
     <div className="signin-container width-100 justify-center d-flex">
       <div className="signin-bar-navigation width-100 justify-center">
@@ -95,7 +105,7 @@ function SignIn() {
                 <form className="signin_form_frame flex width-2-3">
                   <div className="input_wrap">
                     <p>Email Address* :</p>
-                    <input className="form_email input_field" type="text" placeholder="Please enter your email address"/>
+                    <input className="form_email input_field" onChange={e =>{setEmail(e.target.value)}} type="text" placeholder="Please enter your email address"/>
                   </div>
                   <div className="input_wrap">
                     <p>Password* :</p>
@@ -114,8 +124,10 @@ function SignIn() {
                     </p>
                   </div>
                   <div className="input_wrap mt-8px">
-                    <input className="btn_submit" id="btn_signup" type="submit" value="SIGNUP" />
+                    {/* <input className="btn_submit" id="btn_signup" type="submit" value="SIGNUP" /> */}
+                    <button className="btn_submit" onClick={register}>Register</button>
                   </div>
+                 
                   
                   <div className="horizontalLine"></div>
                   
