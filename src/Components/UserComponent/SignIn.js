@@ -5,17 +5,22 @@ import { auth } from "../firebase";
 import { createUserWithEmailAndPassword,signInWithEmailAndPassword } from "firebase/auth";
 import { async } from "@firebase/util";
 import { useHistory } from "react-router-dom";
-
+// ??import useStateValue 
 
 
 function SignIn() {
   //auth state changed
   // test
   const [currentUser, setcurrentUser] = useState();
-
+  //dispatch
+ // const [{},dispatch] = useStateValue();
   useEffect(()=>{
     const unsubcribe = auth.onAuthStateChanged((user => {
-      setcurrentUser(user);
+      if(user){
+        setcurrentUser(user);//test
+//        dispatch
+
+      }
 
     }));
     return unsubcribe;
@@ -70,7 +75,9 @@ const history = useHistory(); //
     signInWithEmailAndPassword(auth, email,password).then((userCredential) => {
       // Signed in 
       console.log(userCredential.user)
-      
+      if(userCredential){
+        history.push('/');//back to the homepage
+      }
       // ...
     })
     .catch((error) => {

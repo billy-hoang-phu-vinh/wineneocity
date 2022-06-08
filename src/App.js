@@ -6,10 +6,17 @@ import HeaderContainer from "./Components/HeaderContainer";
 import MainContainer from "./Components/MainContainer";
 import FooterContainer from "./Components/FooterContainer";
 import SignIn from "./Components/UserComponent/SignIn";
+import { useEffect } from "react";
+import { auth } from "./Components/firebase";
 
 
 function App() {
-  //test router 
+  useEffect(()=> {
+  //run only when component loads
+    auth.onAuthStateChanged(authUser => {
+      console.log(`user >>: `,authUser) //debug
+    });
+  },[]);
   return (
     <Router>
       
