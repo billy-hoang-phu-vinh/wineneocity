@@ -104,14 +104,17 @@ function ProductPromotionTab() {
                           modules={[Scrollbar]}
 
                         >
-                          <SwiperSlide><Product 
+                          <SwiperSlide>
+                            {/* render a product list here */}
+                            <Product 
                           name={sample_product.name}
                           description={sample_product.description}
                           price={sample_product.price}
                           promoprice={sample_product.promoprice}
                           img={sample_product.img}
                           
-                          /></SwiperSlide>
+                          />
+                          </SwiperSlide>
 
 
                         </Swiper>
