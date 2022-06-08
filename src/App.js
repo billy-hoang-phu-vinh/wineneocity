@@ -8,7 +8,7 @@ import FooterContainer from "./Components/FooterContainer";
 import SignIn from "./Components/UserComponent/SignIn";
 import { useEffect } from "react";
 import { auth } from "./Components/firebase";
-
+import Checkout from "./Components/ProductComponent/Checkout";
 
 function App() {
   useEffect(()=> {
@@ -21,13 +21,18 @@ function App() {
     <Router>
       
         <div className="App">
+        <HeaderContainer />
+
         <Switch>
 
           <Route path="/signin">
             <SignIn />
           </Route>
+
+          <Route path="/checkout">
+            <Checkout />
+          </Route>
           <Route path="/">
-            <HeaderContainer />
             <MainContainer />
             <FooterContainer />
           </Route>

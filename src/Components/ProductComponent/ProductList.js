@@ -3,6 +3,7 @@ import Product from "./Product";
 
 function ProductList() {
   return (
+    // assume quantity 
     <div className="productList d-flex flex-row">
       <Product/>
       <Product/>
