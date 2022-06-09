@@ -3,8 +3,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Product from "./Product";
 import { Scrollbar } from "swiper";
-
+import ProductList from "./ProductList";
 function ProductPromotionTab() {
+
 
   const [toggleState, setToggleState] = useState(1);
   //onclick -> save tab positon
@@ -112,7 +113,7 @@ function ProductPromotionTab() {
                           <SwiperSlide>
                             {/* render a product list here */}
                             {/* <ProductList/> */}
-                            
+                            <ProductList/>
                           </SwiperSlide>
 
 

@@ -3,10 +3,10 @@ import tag from "../../img/icons/tag.png";
 import { useStatevalue } from "../../StateProvider";
 function Product(props) {
   const [{ cart }, dispatch] = useStatevalue();
-  console.log(`this is  >> cart`, cart);
-  console.log(`this is  >> id`, props.id);
+
   const addtoCart = () => {
     //send item to data layer
+    
     dispatch({
       type: "ADD_TO_CART",
       item: {

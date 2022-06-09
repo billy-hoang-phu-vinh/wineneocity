@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useStatevalue } from "../../StateProvider";
 
 function HeaderNavigation() {
@@ -9,13 +10,14 @@ function HeaderNavigation() {
       <div className="container mx-auto">
         <div className="d-flex justify-between">
           <div className="logo padding-8px">
-            <a className="inline-block" href="/">
-              <img
+            <Link to="/">
+            <img
                 className="width-150-px"
                 src={require("../../img/logo.png")}
                 alt="logo"
               />
-            </a>
+            </Link>
+            
           </div>
           <div className="search-bar item-center">
             <form className="flex width-100">
@@ -37,17 +39,18 @@ function HeaderNavigation() {
           </div>
           <div className="user-header-bar d-flex justify-end position-relative">
             <div className="width-35-px padding-top-bottom-dot5">
-              <a href="/signin">
-                <i class="fa fa-user-o scale-1-3" aria-hidden="true"></i>
-              </a>
+              <Link to="/signin">
+              <i class="fa fa-user-o scale-1-3" aria-hidden="true"></i>
+              </Link>
             </div>
-            <a href="/checkout">
+            <Link to="/checkout">
             <div className="padding-top-bottom-dot5">
               <i class="fa fa-shopping-basket scale-1-3" aria-hidden="true"></i>
               {/* in case there is any error with cart, it does not stop render*/}
               <span> {cart?.length}</span>
             </div>
-            </a>
+            </Link>
+            
 
             
           </div>

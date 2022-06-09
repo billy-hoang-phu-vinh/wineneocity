@@ -23,7 +23,7 @@ function ProductList(props) {
     element.price = (1-promo)*element.originalPrice
   });
   const listItems = list.map((element)=>
-  <div>{element}
+  <div>
   <Product
   id={element.id}
   name={element.name}
@@ -37,8 +37,8 @@ function ProductList(props) {
   return (
     // assume quantity
     <div className="productList d-flex flex-row">
-      
       {listItems}
+      
     </div>
   );
 }
