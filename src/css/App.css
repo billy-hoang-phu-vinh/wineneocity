@@ -687,6 +687,10 @@ text-overflow: ellipsis;
 .brand:hover .megamenu{
   display: flex;
 }
+.brand:hover {
+  border-top-width: 2px;
+  border-top-color: #b60238;
+}
 .category_title{
   font-size: 1.8rem;
 

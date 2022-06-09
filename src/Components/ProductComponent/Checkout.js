@@ -6,8 +6,8 @@ function Checkout(props) {
   const sample_product = {
     name: "Gaja Darmagi 750ml",
     description:"Darmagi has a precise personality due to the Barbaresco soil which emphasizes its early austerity, resulting in a refined and complex wine. It has a dark colour, with spicy aromas of paprika, liquorice, cassis fruit and flowers, especially violet. This wine has a remarkable structure, with refined tannins. Suitable for long ageing.",
-    price:39,
-    promoprice:19,
+    price:0,
+    originalPrice:19,
     img: "https://cdn11.bigcommerce.com/s-oyi93ews/products/11878/images/7453/gaja-darmagi-449422__02818.1552094550.900.900.jpg?c=2",
 
 
@@ -34,14 +34,14 @@ function Checkout(props) {
            name={sample_product.name}
            description={sample_product.description}
            price={sample_product.price}
-           promoprice={sample_product.promoprice}
+           originalPrice={sample_product.originalPrice}
            img={sample_product.img}/>
            
            <CheckoutItem
            name={sample_product.name}
            description={sample_product.description}
            price={sample_product.price}
-           promoprice={sample_product.promoprice}
+           originalPrice={sample_product.originalPrice}
            img={sample_product.img}/>
         </div>
         <div className="width-30">

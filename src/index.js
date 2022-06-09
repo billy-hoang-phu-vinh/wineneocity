@@ -3,10 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { StateProvider } from './StateProvider';
+import reducer, { initialState } from './reducer';
 ReactDOM.render(
   <React.StrictMode>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <App/>
+    <StateProvider initialState={initialState} reducer={reducer}>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />  
+
+      <App/>
+
+    </StateProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -3,21 +3,26 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Product from "./Product";
 import { Scrollbar } from "swiper";
+
 function ProductPromotionTab() {
+
   const [toggleState, setToggleState] = useState(1);
   //onclick -> save tab positon
   const toggleTab = (index) => {
     setToggleState(index);
   };
   const sample_product = {
+    id:"1",
     name: "Gaja Darmagi 750ml",
     description:"Darmagi has a precise personality due to the Barbaresco soil which emphasizes its early austerity, resulting in a refined and complex wine. It has a dark colour, with spicy aromas of paprika, liquorice, cassis fruit and flowers, especially violet. This wine has a remarkable structure, with refined tannins. Suitable for long ageing.",
-    price:39,
-    promoprice:19,
+    price:0,
+    originalPrice:19,
     img: "https://cdn11.bigcommerce.com/s-oyi93ews/products/11878/images/7453/gaja-darmagi-449422__02818.1552094550.900.900.jpg?c=2",
 
-
   }
+
+  
+
   return (
     <div className="container mx-auto bg-silk">
       <div className="d-flex justify-between position-relative">
@@ -106,14 +111,8 @@ function ProductPromotionTab() {
                         >
                           <SwiperSlide>
                             {/* render a product list here */}
-                            <Product 
-                          name={sample_product.name}
-                          description={sample_product.description}
-                          price={sample_product.price}
-                          promoprice={sample_product.promoprice}
-                          img={sample_product.img}
-                          
-                          />
+                            {/* <ProductList/> */}
+                            
                           </SwiperSlide>
 
 
