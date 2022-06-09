@@ -1,13 +1,11 @@
 import "./Subtotal.css";
 import CurrencyFormat from 'react-currency-format';
-import React, { useState } from "react";
+import React from "react";
 import { useStatevalue } from "../../StateProvider";
 import { Link } from "react-router-dom";
 
 function Subtotal(){
-    // const [subtotal,setSubtotal] = useState(0);
-    // const [totalItems,settotalItems] = useState(0);
-    const [{ cart, promo }, dispatch] = useStatevalue();
+    const [{ cart }] = useStatevalue();
 
     let test = cart;
     let subtotal_temp = 0;
@@ -20,18 +18,18 @@ function Subtotal(){
           });
     }
    
-//   setSubtotal(subtotal_temp);
-//   settotalItems(totalItems_temp);
 
+
+// pass value to use this setting: currency & decimal scale
     return <div className="subtotal mt-8px ">
         <CurrencyFormat 
-        value={0} displayType={'text'} 
+        value={subtotal_temp} displayType={'text'} 
         thousandSeparator={true} prefix={'$'} 
         decimalScale ={2}
         renderText={value => 
         <div>
             <p>
-                Subtotal ({totalItems_temp} items): <strong>{subtotal_temp}</strong>
+                Subtotal ({totalItems_temp} items): <strong>{value}</strong>
             </p>
                 <small className="subtotal__gift">
                     <input type="checkbox"/> 

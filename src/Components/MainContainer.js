@@ -26,13 +26,11 @@ function MainContainer() {
     }
   });
 
+
   
   return (
     <div className="main-container">
       {/* banner Swiper react */}
-      <div>
-        currently user here: {userName}
-      </div>
       <Slider/>
       <MiddlePromotion/>
       <ProductPromotionTab/>

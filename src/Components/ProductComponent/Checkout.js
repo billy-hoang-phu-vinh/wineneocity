@@ -4,7 +4,7 @@ import Subtotal from "./Subtotal";
 import { useStatevalue } from "../../StateProvider";
 function Checkout(props) {
   //load cart from state
-  const [{ cart, promo }, dispatch] = useStatevalue();
+  const [{ cart, user }, dispatch] = useStatevalue();
   
   const checkoutItem = cart.map((element)=>
   <div>
@@ -36,6 +36,7 @@ function Checkout(props) {
       </div>
       <div className="d-flex container mx-auto flex-row">
         <div className="width-70">
+        <h2 className="justify-start text-align-left mx-1rem">Hello {user?.email}</h2>       
           <h2 className="justify-start text-align-left mx-1rem">Your cart</h2>
 
           {checkoutItem}

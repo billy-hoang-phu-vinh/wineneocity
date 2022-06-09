@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { signup } from "../firebase";
-import { login } from "../firebase";
+
 import { auth } from "../firebase";
 import { createUserWithEmailAndPassword,signInWithEmailAndPassword } from "firebase/auth";
-import { async } from "@firebase/util";
 import { useHistory } from "react-router-dom";
 // ??import useStateValue 
 
@@ -18,6 +16,7 @@ function SignIn() {
     const unsubcribe = auth.onAuthStateChanged((user => {
       if(user){
         setcurrentUser(user);//test
+        
 //        dispatch
 
       }
