@@ -1,13 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import CheckoutItem from "./CheckoutItem";
 import Subtotal from "./Subtotal";
 import { useStatevalue } from "../../StateProvider";
 function Checkout(props) {
   //load cart from state
   const [{ cart, promo }, dispatch] = useStatevalue();
-
   
-
   const checkoutItem = cart.map((element)=>
   <div>
   <CheckoutItem
@@ -20,6 +18,7 @@ function Checkout(props) {
   />
   </div>
   );
+
   
 
   

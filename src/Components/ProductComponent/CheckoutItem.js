@@ -19,7 +19,7 @@ function CheckoutItem(props) {
           <p className="quantity">
             <span>Qty: </span>
             <select>
-              <option selected value="1">
+              <option value="default">
                 1
               </option>
               <option value="2">2</option>
