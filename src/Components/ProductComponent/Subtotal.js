@@ -7,16 +7,13 @@ import { Link } from "react-router-dom";
 function Subtotal(){
     const [{ cart }] = useStatevalue();
 
-    let test = cart;
+    let temp_cart = cart;
     let subtotal_temp = 0;
     let totalItems_temp = 0;
     //update value
-    if(test.length > 0){
-        test.forEach(element => {
-            subtotal_temp += element.price;
-            totalItems_temp +=1;
-          });
-    }
+    temp_cart.forEach(element => {
+        subtotal_temp += element.price*element.qty;
+      });
    
 
 

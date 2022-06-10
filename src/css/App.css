@@ -777,3 +777,10 @@ max-width: 500px;
 .checkout_banner{
   max-width: 100%;
 }
+.signout_btn{
+  transform: scale(1.6);
+  margin-left: 1rem;
+}
+.fa-sign-out{
+  color: red !important;
+}

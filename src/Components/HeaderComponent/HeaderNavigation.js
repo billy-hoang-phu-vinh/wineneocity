@@ -50,6 +50,11 @@ function HeaderNavigation() {
               <span> {cart?.length}</span>
             </div>
             </Link>
+            <div className="width-35-px padding-top-bottom-dot5 signout_btn">
+              <Link to="/signout">
+              <i class="fa fa-sign-out" aria-hidden="true"></i>
+              </Link>
+            </div>
             
 
             

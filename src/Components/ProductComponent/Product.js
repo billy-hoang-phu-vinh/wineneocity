@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import tag from "../../img/icons/tag.png";
 import { useStatevalue } from "../../StateProvider";
+
+//promo de
 function Product(props) {
-  const [{ cart }, dispatch] = useStatevalue();
+
+  const [state, dispatch] = useStatevalue();
 
   const addtoCart = () => {
     //send item to data layer
-    
-    dispatch({
+    const objIndex = state.cart? state.cart.findIndex((obj => obj.id === props.id)) : -1
+    console.log(`phat hien duplicate `,objIndex)
+    objIndex===-1? dispatch({
       type: "ADD_TO_CART",
       item: {
         id: props.id,
@@ -15,8 +19,17 @@ function Product(props) {
         description: props.description,
         price: props.price,
         originalPrice: props.originalPrice,
+        qty:1
       },
-    });
+    }) : dispatch({
+      type: "UPDATE_ITEM_CART",
+      position:objIndex,
+      newQty:state.cart[objIndex].qty+1
+    })
+    //add new item
+    
+    
+
     return;
   };
   return (
@@ -40,6 +53,10 @@ function Product(props) {
               <div className="promo__price">
                 <small>$</small>
                 <strong>{props.originalPrice}</strong>
+              </div>
+              <div>
+                cart:
+                {state.cart[0]?.qty}
               </div>
             </p>
           </div>
