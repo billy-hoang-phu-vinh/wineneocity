@@ -1,4 +1,4 @@
-import React , { useState} from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useStatevalue } from "../../StateProvider";
 import { getAuth, signOut, onAuthStateChanged } from "firebase/auth";
@@ -15,11 +15,11 @@ function HeaderNavigation() {
       // User is signed in, see docs for a list of available properties
       // https://firebase.google.com/docs/reference/js/firebase.User
       setUserName(user.email);
-      console.log(`set user email: `,user)
+      console.log(`set user email: `, user);
       // ...
     } else {
       // User is signed out
-      // ...
+
     }
   });
   const signout = (e) => {
@@ -31,23 +31,24 @@ function HeaderNavigation() {
 
         setUserName("");
         history.push("/signout");
-        console.log(`Sign-out successful`)
+        console.log(`Sign-out successful`);
         // Clear cart
         dispatch({
-              type: "DELETE_CART"
-            })
-            console.log(`cart is clear`)
- 
+          type: "DELETE_CART",
+        });
+        console.log(`cart is clear`);
       })
       .catch((error) => {
         // An error happened.
       });
   };
-  const Signout = <div className="width-35-px padding-top-bottom-dot5 signout_btn">
-  <button className="signout_btn" onClick={signout}>
-    <i class="fa fa-sign-out" aria-hidden="true"></i>
-  </button>
-</div>
+  const Signout = (
+    <div className="width-35-px padding-top-bottom-dot5 signout_btn">
+      <button className="signout_btn" onClick={signout}>
+        <i class="fa fa-sign-out" aria-hidden="true"></i>
+      </button>
+    </div>
+  );
 
   return (
     <div className="header-bar-navigation">
@@ -97,12 +98,8 @@ function HeaderNavigation() {
               </div>
             </Link>
             <div>
-
-            <Link to="/">
-            {userName?Signout:""}
-            </Link>
+              <Link to="/">{userName ? Signout : ""}</Link>
             </div>
-
           </div>
         </div>
       </div>

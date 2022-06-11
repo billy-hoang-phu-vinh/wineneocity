@@ -17,7 +17,7 @@ const reducer = (state, action) => {
         ...state,
         cart: [],
       };
-    case "UPDATE_ITEM_CART":
+    case "UPDATE_ITEM_CART_1":
       //check duplicate items
       //   state.cart[action.position].qty += 1;
       let currentQuantity = state.cart[action.position].qty;

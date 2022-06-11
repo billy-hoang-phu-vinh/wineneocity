@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import tag from "../../img/icons/tag.png";
 import { useStatevalue } from "../../StateProvider";
 
-//promo de
 function Product(props) {
 
   const [state, dispatch] = useStatevalue();
@@ -22,7 +21,7 @@ function Product(props) {
         qty:1
       },
     }) : dispatch({
-      type: "UPDATE_ITEM_CART",
+      type: "UPDATE_ITEM_CART_1",
       position:objIndex,
       newQty:state.cart[objIndex].qty+1
     })
