@@ -12,10 +12,17 @@ function ProductList(props) {
     price:0,
     originalPrice:19,
     img: "https://cdn11.bigcommerce.com/s-oyi93ews/products/11878/images/7453/gaja-darmagi-449422__02818.1552094550.900.900.jpg?c=2",
-
+  }
+  const sample_product2 = {
+    id:"2",
+    name: "Sample 750ml",
+    description:"its early austerity, resulting in a refined and complex wine. It has a dark colour, with spicy aromas of paprika, liquorice, cassis fruit and flowers, especially violet. This wine has a remarkable structure, with refined tannins. Suitable for long ageing.",
+    price:0,
+    originalPrice:55,
+    img: "https://smartymockups.com/wp-content/uploads/2016/05/Wine_Bottle_Mockup_2ok.jpg",
   }
   const list = [];
-  list.push(sample_product)
+  list.push(sample_product,sample_product2)
   const [{ promo }, dispatch] = useStatevalue();
 
       //recaculate the current price

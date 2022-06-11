@@ -17,6 +17,19 @@ const reducer = (state, action) => {
         ...state,
         cart: [],
       };
+      case "DELETE_ITEM":
+        //check duplicate items
+        console.log(`INDEX: `,action.objIndex)
+
+        console.log(`new cart: `,action.newCart)
+        //
+        const cloneCart = state.cart;
+        // cloneCart.splice(action.objIndex,1)
+        console.log(`clone cart: `,cloneCart)
+        return {
+          ...state,
+          cart: action.newCart,
+        };  
     case "UPDATE_ITEM_CART_1":
       //check duplicate items
       //   state.cart[action.position].qty += 1;

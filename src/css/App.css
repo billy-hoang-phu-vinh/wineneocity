@@ -658,6 +658,20 @@ text-overflow: ellipsis;
   font-size: 16px;
   border-radius: 5px;
 }
+.btn_remove{
+  background-color: #b60238; /* Green */
+  border: none;
+  color: white;
+  padding: 8px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.85rem;
+  border-radius: 5px;
+}
+.btn_remove:hover{
+  cursor: pointer;
+}
 .btn_submit:hover{
   cursor: pointer;
 }
@@ -784,4 +798,7 @@ max-width: 500px;
 }
 .fa-sign-out{
   color: #d31e4b !important;
+}
+.signout_btn:hover{
+  cursor: pointer ;
 }
