@@ -1,54 +1,70 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import CheckoutItem from "./CheckoutItem";
 import Subtotal from "./Subtotal";
+import { useStatevalue } from "../../StateProvider";
+import {getAuth, onAuthStateChanged} from "firebase/auth";
+
 function Checkout(props) {
- 
-  const sample_product = {
-    name: "Gaja Darmagi 750ml",
-    description:"Darmagi has a precise personality due to the Barbaresco soil which emphasizes its early austerity, resulting in a refined and complex wine. It has a dark colour, with spicy aromas of paprika, liquorice, cassis fruit and flowers, especially violet. This wine has a remarkable structure, with refined tannins. Suitable for long ageing.",
-    price:39,
-    promoprice:19,
-    img: "https://cdn11.bigcommerce.com/s-oyi93ews/products/11878/images/7453/gaja-darmagi-449422__02818.1552094550.900.900.jpg?c=2",
+  //load cart from state
+  const [{ cart, user }, dispatch] = useStatevalue();
+  const [userName, setUserName] = useState();
 
+  const auth = getAuth();// ?
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      // User is signed in, see docs for a list of available properties
+      // https://firebase.google.com/docs/reference/js/firebase.User
+      const uid = user.uid;
+      setUserName(user.email);
+      console.log(`show username here: `,user.email);
 
-  }
+      // ...
+    } else {
+      // User is signed out
+      // ...
+    }
+  });
+
+  const checkoutItem = cart.map((element)=>
+  <div>
+  <CheckoutItem
+  id={element.id}
+  name={element.name}
+  description={element.description}
+  price={element.price}
+  originalPrice={element.originalPrice}
+  img={element.img}
+  qty={element.qty}
+  />
+  </div>
+  );
+
+  
+
+  
 
   return (
     <div className="checkout">
       <div className="d-flex container mx-auto flex-row">
         <a href="/">
-        <img
+          <img
             className="checkout_banner"
             src="https://i.imgur.com/pqaZbf0.jpg"
             alt=""
           />
         </a>
-      
-     </div>
-     <div className="d-flex container mx-auto flex-row">
+      </div>
+      <div className="d-flex container mx-auto flex-row">
         <div className="width-70">
-          <h2 className="justify-start text-align-left mx-1rem">
-            Your cart
-          </h2>
-           <CheckoutItem
-           name={sample_product.name}
-           description={sample_product.description}
-           price={sample_product.price}
-           promoprice={sample_product.promoprice}
-           img={sample_product.img}/>
-           
-           <CheckoutItem
-           name={sample_product.name}
-           description={sample_product.description}
-           price={sample_product.price}
-           promoprice={sample_product.promoprice}
-           img={sample_product.img}/>
+        <h2 className="justify-start text-align-left mx-1rem">Hello, {userName?userName:"Guest"} </h2>       
+          <h2 className="justify-start text-align-left mx-1rem">Your cart</h2>
+
+          {checkoutItem}
         </div>
         <div className="width-30">
-
-          <Subtotal/>
+          <Subtotal />
         </div>
-     </div>
+      </div>
     </div>
   );
 }

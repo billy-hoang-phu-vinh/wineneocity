@@ -491,6 +491,8 @@ p {
 /* Brands */
 .brand{
   display: flex;
+  border-top-width: 2px;
+  border-top-color: white;
 }
 /* .brand:hover > .test {
   color: red;
@@ -687,6 +689,10 @@ text-overflow: ellipsis;
 .brand:hover .megamenu{
   display: flex;
 }
+.brand:hover {
+  border-top-width: 2px;
+  border-top-color: #b60238 !important;
+}
 .category_title{
   font-size: 1.8rem;
 
@@ -770,4 +776,12 @@ max-width: 500px;
 }
 .checkout_banner{
   max-width: 100%;
+}
+.signout_btn{
+  transform: scale(1.5);
+  margin-left: 0.5rem;
+  background-color: inherit;
+}
+.fa-sign-out{
+  color: #d31e4b !important;
 }

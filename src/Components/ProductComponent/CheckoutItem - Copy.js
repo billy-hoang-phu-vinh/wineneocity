@@ -26,7 +26,7 @@ function CheckoutItem(props) {
               </div>
               <div className="promo__price">
                 <small>$</small>
-                <strong>{props.promoprice}</strong>
+                <strong>{props.originalPrice}</strong>
               </div>
               
             </p>

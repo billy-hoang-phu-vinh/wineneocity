@@ -1,6 +1,7 @@
 import React from "react";
 
 function CheckoutItem(props) {
+
   return (
     <div className="checkout bg-white">
       <div className="checkout__card d-flex">
@@ -17,13 +18,19 @@ function CheckoutItem(props) {
             </div>
           </p>
           <p className="quantity">
-            <span>Qty:  </span>
+            <span>Qty: </span>
             <select>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option selected value="3">
-                3
+              <option value="default">
+                {props.qty}
               </option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
               <option value="0">0</option>
             </select>
           </p>
